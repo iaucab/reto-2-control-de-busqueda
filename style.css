@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+}
+
+.cell {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+}
+
+.block {
+  background: #444;
+}
+
+.init {
+  background: #4d6;
+}
+
+.finish {
+  background: #d64;
+}
