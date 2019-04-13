@@ -9,27 +9,36 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-	<!-- APP -->
-	<main id="app">
-		<div v-for="row in table"
-			class="row"
-		>
-			<cell-component v-for="(cell, col) in row"
-				:option="option"
-				:key="col"
-			></cell-component>
-		</div>
-		<select v-model="option">
-			<option value="block" class="block" selected>Blocks</option>
-			<option value="init" class="init">Start</option>
-			<option value="finish" class="finish">Finish</option>
-		</select>
-		<button
-			@click="start()"
-		>
-			Start
-		</button>
-	</main>
+	<div>
+		<h1>Reto 2</h1>
+		<!-- APP -->
+		<main id="app">
+			<!-- Options -->
+			<select v-model="option" 
+				:class="option"
+				:style="option === 'block' ? 'color: #fff' : ''"
+			>
+				<option value="block" class="block" selected>Blocks</option>
+				<option value="init" class="init">Start</option>
+				<option value="finish" class="finish">Finish</option>
+			</select>
+			<button
+				@click="search(0)"
+			>
+				Start
+			</button>
+			<!-- Canvas -->
+			<div v-for="(row, i) in table"
+				class="row"
+			>
+				<cell-component v-for="(cell, j) in row"
+					:option="option"
+					:position="{i, j}"
+					:key="j"
+				></cell-component>
+			</div>
+		</main>
+	</div>
 	<!-- Components -->
 	<script type="text/x-template" id="cell-template">
 		<div class="cell"

@@ -1,5 +1,35 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body {
+  text-align: center;
+}
+
+body > div {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+select {
+  width: 300px;
+  padding: .9em 2em;
+}
+
+button {
+  border: 1px #444;
+  padding: 1em 2em;
+  background: #6ae;
+}
+
+select, button {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
 .row {
   display: flex;
+  justify-content: center;
 }
 
 .cell {
@@ -19,4 +49,12 @@
 
 .finish {
   background: #d64;
+}
+
+.visited {
+  background: #6ae;
+}
+
+.complete {
+  background: #cc4;
 }
