@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div>
-		<h1>Reto 2</h1>
+		<h1>Challenge 2</h1>
 		<!-- APP -->
 		<main id="app">
 			<!-- Options -->
@@ -38,12 +38,16 @@
 				></cell-component>
 			</div>
 		</main>
+		<small>
+			<i>Press <b>Ctrl</b> to add blocks more faster</i>
+		</small>
 	</div>
 	<!-- Components -->
 	<script type="text/x-template" id="cell-template">
 		<div class="cell"
 			:class="className"
 			@click="toggleCell(option)"
+			@mouseover.ctrl="toggleCell(option)"
 		></div>
 	</script>
 	<script src="app.js"></script>
